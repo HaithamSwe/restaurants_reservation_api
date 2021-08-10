@@ -21,7 +21,7 @@ Before using the api for the first time:
 How to create the .env file:
 - Create a new file in the root folder and name it: '.env'
 - Write the environment variables of your environment (see the image) 
- ![image](https://user-images.githubusercontent.com/48700453/128815877-365e5761-4ad8-439c-a76c-3f71c84c2fff.png)
+ <br> ![image](https://user-images.githubusercontent.com/48700453/128815877-365e5761-4ad8-439c-a76c-3f71c84c2fff.png)
 - Save the file
 
 
