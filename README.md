@@ -14,6 +14,7 @@
 - Install the dependencies
 - Create the needed tables in your database
 - Insert the timeslots of table reservation to the database
+- Insert the tables of the restaurant to the database
 
 
 
@@ -52,6 +53,16 @@ Example:
 INSERT INTO reservation_timeslots (start_at, end_at) VALUES ('12:30', '13:45');
 ```
 
+
+How to insert the tables of the restaurant to the database:
+- Run the following query in your RDBMS to insert reservation timeslot
+ ```bash
+INSERT INTO tables (number_of_chairs, is_active) VALUES ([INT value], [BOOLEAN value]);
+```
+Example:
+ ```bash
+INSERT INTO tables (number_of_chairs, is_active) VALUES (4, 'true');
+```
 
 
 
