@@ -21,8 +21,24 @@
 
 How to create the .env file:
 - Create a new file in the root folder and name it: '.env'
-- Write the environment variables of your environment (see the image) 
- <br> ![image](https://user-images.githubusercontent.com/48700453/128815877-365e5761-4ad8-439c-a76c-3f71c84c2fff.png)
+- Write the environment variables of your environment as the following format
+```bash
+DB_HOST=[your DBMS host address]
+DB_PORT=[your DBMS port]
+DB_USER=[database username]
+DB_NAME=[database name]
+DB_PASSWORD=[database password]
+SERVER_PORT=[backend server port]
+``` 
+Example:
+```bash
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_NAME=postgres
+DB_PASSWORD=000000
+SERVER_PORT=3000
+``` 
 - Save the file
 
 
@@ -76,42 +92,42 @@ INSERT INTO tables (number_of_chairs, is_active) VALUES (4, 'true');
 
 
 /login 
-- Funtion type: post
+- Function type: post
 - Function parameters: employee_number, password
 - return: token
 - ![algorithim 1](https://user-images.githubusercontent.com/48700453/128823622-8586deca-8bd3-4f6b-9f5c-9ca2a7382a6f.jpg)
 <br> <br>
 
 /signup
-- Funtion type: post
+- Function type: post
 - Function parameters: employee_number, employee_number, password
 - return: token
 - ![algorithim 1 (1)](https://user-images.githubusercontent.com/48700453/128828790-1cb97eac-9e95-47c7-9e40-6a876d023141.jpg)
 <br> <br>
 
 /check_timeslotes
-- Funtion type: get
+- Function type: get
 - Function parameters: token, number_of_chairs
 - return: available reservations data
 - ![algorithim 1 (3)](https://user-images.githubusercontent.com/48700453/128828848-033296eb-f2ac-4334-b956-dd23ddd4ab66.jpg)
 <br> <br>
 
 /new_reservation
-- Funtion type: post
+- Function type: post
 - Function parameters: token, reservation_timeslot_id, table_id
 - return: success / fail
 - ![algorithim 1 (4)](https://user-images.githubusercontent.com/48700453/128828892-542a3b8e-6c24-46f6-a85e-b5d100a1d5f9.jpg)
 <br> <br>
 
 /get_reservation
-- Funtion type: get
+- Function type: get
 - Function parameters: token, page_number (page of results), is_ascending ('true' or 'false')
 - return: a page of reservations data of today that sorted ascending or descending that has up to 10 results, hasNextPage (a bool that showes if their is a next page pf results)
 - ![algorithim 1](https://user-images.githubusercontent.com/48700453/128828944-3b801cf7-966e-4feb-9962-6eeeac66b71a.png)
 <br> <br>
 
 /delete_reservation
-- Funtion type: delete
+- Function type: delete
 - Function parameters: token, reservation_id 
 - return: 'success' / 'no such data reservation'
 - ![algorithim 1 (5)](https://user-images.githubusercontent.com/48700453/128829018-255e94e4-4af0-4d76-9214-fb2eca20de7e.jpg)
