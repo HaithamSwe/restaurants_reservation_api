@@ -1,7 +1,7 @@
 # restaurants_reservation_api
 
-**Before you start make sure you have installed:
-**
+**Before you start make sure you have installed:**
+
 - [NodeJS](https://www.npmjs.com/) that includes `npm`
 - [PostgreSQL](https://www.postgresql.org/)
 
@@ -39,6 +39,7 @@ CREATE TABLE reservation_timeslots (reservation_timeslot_id serial PRIMARY KEY, 
 CREATE TABLE tables (table_id serial PRIMARY KEY, number_of_chairs INT NOT NULL, is_active bool NOT NULL);
 CREATE TABLE reservations (reservation_id serial PRIMARY KEY, reservation_timeslot_id INT NOT NULL, table_id INT NOT NULL, reservation_date DATE NOT NULL);
 ```
+Note: SQL file is included<br><br>
 
 
 How to insert the timeslots of table reservation to the database:
