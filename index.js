@@ -93,7 +93,7 @@ app.get('/check_timeslotes', verifyToken, (req, res) => {
                     const reservations = (await pool.query("SELECT * FROM reservations WHERE (reservation_timeslot_id = " + reservationsQuery1Condition + ") AND (table_id = " + reservationsQuery2Condition + ") AND (reservation_date = CURRENT_DATE)")).rows
                     const availableReservations = []
                     for (let i = 0; i < timeslots.length; i++) {
-                        console.log(tables)
+
                         if (reservations.length != 0) {
                             for (let j = 0; j < reservations.length; j++) {
                                 for (let k = 0; k < tables.length; k++) {
@@ -188,7 +188,6 @@ app.delete('/delete_reservation', verifyToken, async (req, res) => {
     jwt.verify(req.token, 'secretkey', async (err, authData) => {
         if (!err) {
             const deleteQuery = await pool.query("DELETE FROM reservations WHERE reservation_id = '" + req.query.reservation_id + "'")
-            console.log(deleteQuery)
             res.json({
                 states: deleteQuery.rowCount == 1 ? 'success' : 'no such data reservation',
                 authData
