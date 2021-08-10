@@ -48,7 +48,7 @@ INSERT INTO reservation_timeslots (start_at, end_at) VALUES ([TIME value], [TIME
 ```
 Example:
  ```bash
-INSERT INTO reservation_timeslots (start_at, end_at) VALUES (12:30, 13:45);
+INSERT INTO reservation_timeslots (start_at, end_at) VALUES ('12:30', '13:45');
 ```
 
 
