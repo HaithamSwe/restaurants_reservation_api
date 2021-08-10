@@ -65,35 +65,44 @@ INSERT INTO reservation_timeslots (start_at, end_at) VALUES ('12:30', '13:45');
 
 
 /login 
-- ![algorithim 1](https://user-images.githubusercontent.com/48700453/128823622-8586deca-8bd3-4f6b-9f5c-9ca2a7382a6f.jpg)
 - Funtion type: post
 - Function parameters: employee_number, password
 - return: token
+- ![algorithim 1](https://user-images.githubusercontent.com/48700453/128823622-8586deca-8bd3-4f6b-9f5c-9ca2a7382a6f.jpg)
+<br> <br>
 
 /signup
 - Funtion type: post
 - Function parameters: employee_number, employee_number, password
 - return: token
+- ![algorithim 1 (1)](https://user-images.githubusercontent.com/48700453/128828790-1cb97eac-9e95-47c7-9e40-6a876d023141.jpg)
+<br> <br>
 
 /check_timeslotes
 - Funtion type: get
 - Function parameters: token, number_of_chairs
 - return: available reservations data
+- ![algorithim 1 (3)](https://user-images.githubusercontent.com/48700453/128828848-033296eb-f2ac-4334-b956-dd23ddd4ab66.jpg)
+<br> <br>
 
 /new_reservation
 - Funtion type: post
 - Function parameters: token, reservation_timeslot_id, table_id
 - return: success / fail
-
+- ![algorithim 1 (4)](https://user-images.githubusercontent.com/48700453/128828892-542a3b8e-6c24-46f6-a85e-b5d100a1d5f9.jpg)
+<br> <br>
 
 /get_reservation
 - Funtion type: get
 - Function parameters: token, page_number (page of results), is_ascending ('true' or 'false')
 - return: a page of reservations data of today that sorted ascending or descending that has up to 10 results, hasNextPage (a bool that showes if their is a next page pf results)
-
+- ![algorithim 1](https://user-images.githubusercontent.com/48700453/128828944-3b801cf7-966e-4feb-9962-6eeeac66b71a.png)
+<br> <br>
 
 /delete_reservation
 - Funtion type: delete
 - Function parameters: token, reservation_id 
 - return: 'success' / 'no such data reservation'
+- ![algorithim 1 (5)](https://user-images.githubusercontent.com/48700453/128829018-255e94e4-4af0-4d76-9214-fb2eca20de7e.jpg)
 
+<br> <br>
