@@ -65,6 +65,7 @@ INSERT INTO reservation_timeslots (start_at, end_at) VALUES ('12:30', '13:45');
 
 
 /login
+-![algorithim 1](https://user-images.githubusercontent.com/48700453/128823622-8586deca-8bd3-4f6b-9f5c-9ca2a7382a6f.jpg)
 - Funtion type: post
 - Function parameters: employee_number, password
 - return: token
